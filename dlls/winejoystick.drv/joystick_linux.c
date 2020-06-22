@@ -260,9 +260,9 @@ LRESULT driver_joyGetDevCaps(DWORD_PTR dwDevID, LPJOYCAPSW lpCaps, DWORD dwSize)
 	lpCaps->wUmax = 0xFFFF;
 	lpCaps->wVmin = 0;
 	lpCaps->wVmax = 0xFFFF;
-	lpCaps->wMaxAxes = 6; /* same as MS Joystick Driver */
+	lpCaps->wMaxAxes = 16; /* same as MS Joystick Driver */
 	lpCaps->wNumAxes = 0; /* nr of axes in use */
-	lpCaps->wMaxButtons = 32; /* same as MS Joystick Driver */
+	lpCaps->wMaxButtons = 64; /* same as MS Joystick Driver */
 	lpCaps->szRegKey[0] = 0;
 	lpCaps->szOEMVxD[0] = 0;
 	lpCaps->wCaps = 0;
@@ -326,6 +326,7 @@ LRESULT driver_joyGetPosEx(DWORD_PTR dwDevID, LPJOYINFOEX lpInfo)
 	    switch (jstck->axesMap[ev.number]) {
 	    case 0: /* X */
 	    case 8: /* Wheel */
+            case 40: /* Mouse-like */
 		jstck->x = ev.value;
 		break;
 	    case 1: /* Y */

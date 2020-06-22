@@ -47,8 +47,8 @@ struct Joystick {
     struct Effect *effects;
 };
 
-#define TEST_MAX_BUTTONS    32
-#define TEST_MAX_AXES       4
+#define TEST_MAX_BUTTONS    64
+#define TEST_MAX_AXES       8
 
 struct Graphics {
     HWND hwnd;

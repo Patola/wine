@@ -414,6 +414,16 @@ static DWORD WINAPI input_thread(void *param)
         axes_pos[1][1] = state.lRy;
         axes_pos[2][0] = state.lZ;
         axes_pos[2][1] = state.lRz;
+	axes_pos[3][0] = 0;
+	axes_pos[3][1] = 0;
+	axes_pos[4][0] = 0;
+	axes_pos[4][1] = 0;
+	axes_pos[5][0] = 0;
+	axes_pos[5][1] = 0;
+	axes_pos[6][0] = 0;
+	axes_pos[6][1] = 0;
+	axes_pos[7][0] = 0;
+	axes_pos[7][1] = 0;
 
         /* Set pov values */
         for (j = 0; j < ARRAY_SIZE(pov_val); j++)

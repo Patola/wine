@@ -451,10 +451,10 @@ static BOOL build_report_descriptor(struct platform_private *ext)
     report_size = 0;
 
     axis_count = pSDL_JoystickNumAxes(ext->sdl_joystick);
-    if (axis_count > 6)
+    if (axis_count > 16)
     {
-        FIXME("Clamping joystick to 6 axis\n");
-        axis_count = 6;
+        FIXME("Clamping joystick to 16 axis\n");
+        axis_count = 16;
     }
 
     ext->axis_start = report_size;
@@ -470,9 +470,9 @@ static BOOL build_report_descriptor(struct platform_private *ext)
     ext->ball_start = report_size;
     if (ball_count)
     {
-        if ((ball_count*2) + axis_count > 9)
+        if ((ball_count*2) + axis_count > 19)
         {
-            FIXME("Capping ball + axis at 9\n");
+            FIXME("Capping ball + axis at 19\n");
             ball_count = (9-axis_count)/2;
         }
         descript_size += sizeof(REPORT_AXIS_HEADER);

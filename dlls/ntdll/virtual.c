@@ -1759,11 +1759,11 @@ static NTSTATUS map_image( HANDLE hmapping, ACCESS_MASK access, int fd, int top_
     server_enter_uninterrupted_section( &csVirtual, &sigset );
 
     if (base >= (char *)address_space_start)  /* make sure the DOS area remains free */
-        status = map_view( &view, base, total_size, 0, top_down, SEC_IMAGE | SEC_FILE |
+        status = map_view( &view, base, total_size, 0, TRUE, SEC_IMAGE | SEC_FILE |
                            VPROT_COMMITTED | VPROT_READ | VPROT_EXEC | VPROT_WRITECOPY, zero_bits_64 );
 
     if (status != STATUS_SUCCESS)
-        status = map_view( &view, NULL, total_size, 0, top_down, SEC_IMAGE | SEC_FILE |
+        status = map_view( &view, NULL, total_size, 0, TRUE, SEC_IMAGE | SEC_FILE |
                            VPROT_COMMITTED | VPROT_READ | VPROT_EXEC | VPROT_WRITECOPY, zero_bits_64 );
 
     if (status != STATUS_SUCCESS) goto error;
