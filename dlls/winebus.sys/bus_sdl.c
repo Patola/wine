@@ -473,7 +473,7 @@ static BOOL build_report_descriptor(struct platform_private *ext)
         if ((ball_count*2) + axis_count > 19)
         {
             FIXME("Capping ball + axis at 19\n");
-            ball_count = (9-axis_count)/2;
+            ball_count = (19-axis_count)/2;
         }
         descript_size += sizeof(REPORT_AXIS_HEADER);
         descript_size += (sizeof(REPORT_AXIS_USAGE) * ball_count * 2);
