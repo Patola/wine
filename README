@@ -3,7 +3,6 @@
 This version of wine incorporates:
 - This small patch that allows SKSE (Skyrim Skript Extender) and SKSEVR to work on Fallout, Skyrim, Fallout VR, Skyrim VR -- https://github.com/hdmap/wine-hackery/blob/master/f4se/mapimagetopdown.patch
 - My current work-in-progress concerning number of buttons and axes in joysticks, for HOTAS specially.
-There is a topic I created in gamingonlinux's forums to explain the build: https://www.gamingonlinux.com/forum/topic/4456
 
 == After this section the README is from the original wine ==
 
