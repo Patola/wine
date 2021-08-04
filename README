@@ -1,3 +1,14 @@
+0. PRE-INTRODUCTION
+
+This repository is a base fork of Valve's fork of wine, go figure. I started it as a playground to make my own changes,
+but it quickly spiralled into a place for consolidating many compatibility patches and for making my own builds of proton
+available. If you know proton, you might know that it's wine with a bunch of other stuff, so the releases tab of this
+repository has a lot of stuff which is not directly wine, deal with it. Even in this messy state this repository is useful
+to me and others, so I don't think this will change. From time to time I do a rebase on valve's fork, but the releases
+are meant to be permanently available.
+
+The rest of the description is the original description/README of wine, nothing is changed.
+
 1. INTRODUCTION
 
 Wine is a program which allows running Microsoft Windows programs
